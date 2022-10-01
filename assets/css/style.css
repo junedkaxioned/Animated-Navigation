@@ -105,32 +105,98 @@ li {
   Header styling starts here
 =================================*/
 
+header {
+  background-color: #eafbff;
+  background-image: linear-gradient(
+    to bottom,
+    #eafbff 0%,
+    #eafbff 50%,
+    #5290f9 50%,
+    #5290f9 100%
+  );
+}
+
+header .wrapper {
+  height: 100vh;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  width: 40px;
+  padding: 20px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition: width 0.6s linear;
+}
+
+.active { width: 350px; }
+
+.nav ul {
+  width: 0;
+  padding: 0; 
+  margin: 0; 
+  display: flex;
+  justify-content: space-evenly;
+  transition: width 0.6s linear;
+}
+
+.active ul { width: 100%; }
+
+.nav ul li {
+  opacity: 0;
+  transform: rotateY(0deg);
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+
+.nav-list {
+  margin: 0 10px;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.hamburger:focus { outline: 0; }
+
+.hamburger .bar {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+}
+
+.hamburger .bar2 {
+  top: auto;
+  bottom: 10px;
+}
+
+.active .hamburger .bar1 { transform: rotate(-765deg) translateY(5.5px); }
+.active .hamburger .bar2 { transform: rotate(765deg) translateY(-5.5px); }
 
 
 /*=================================
   Header styling ends here
 =================================*/  
-
-/*=================================
-  main styling starts here
-=================================*/
-
-
-
-/*=================================
-  main styling ends here
-=================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {}  
